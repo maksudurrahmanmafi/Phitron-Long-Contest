@@ -8,11 +8,9 @@ int main() {
     int t;
     cin>>t;
     while(t--){
-     int n,x,y;
-     cin>>n>>x>>y;
-
-     if(y%x==0&&(y/x<=n)) cout<<"YES\n";
-     else cout<<"NO\n";
+     int n;
+     cin>>n;
+     cout<<((n+3)/4)<<'\n';
     }
     return 0;
 }
