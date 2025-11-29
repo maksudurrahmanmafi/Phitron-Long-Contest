@@ -5,13 +5,8 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;
-    cin>>t;
-    while(t--){
-     int n;
-     cin>>n;
-     cout<<n<<'\n';
-     
-    }
+    int a,b,c;
+    cin>>a>>b>>c;
+    cout<<(5-a)+(5-b)+(5-c);
     return 0;
 }
