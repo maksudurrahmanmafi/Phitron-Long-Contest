@@ -17,13 +17,14 @@ int main() {
             continue;
         }
 
-        int first0 = S.find('0');
-        int last1 = S.rfind('1');
+        int first1 = S.find('1');
+        int last0 = S.rfind('0');
 
-        if (first0 > last1) {
+        if (first1 < last0) {
             cout << 1 << "\n"; // only one block of 1s before 0s
         } else {
             cout << 2 << "\n"; // multiple blocks
         }
     }
 }
+
