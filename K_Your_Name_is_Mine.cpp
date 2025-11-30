@@ -1,3 +1,33 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isSubsequence(const string &a,const  string &b) {
+    int i = 0, j = 0;
+    while(i < a.size() && j < b.size()) {
+        if(a[i] == b[j]) i++;
+        j++;
+    }
+    return i == a.size();
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int T;
+    cin >> T;
+    while(T--) {
+        string M, W;
+        cin >> M >> W;
+
+        if(isSubsequence(M, W) || isSubsequence(W, M)) {
+            cout << "YES\n";
+        } else {
+            cout << "NO\n";
+        }
+    }
+}
 // #include <bits/stdc++.h>
 // using namespace std;
 
@@ -32,32 +62,4 @@
 //         else cout << "NO\n";
 //     }
 // }
-#include <bits/stdc++.h>
-using namespace std;
 
-bool isSubsequence(const string &a,const  string &b) {
-    int i = 0, j = 0;
-    while(i < a.size() && j < b.size()) {
-        if(a[i] == b[j]) i++;
-        j++;
-    }
-    return i == a.size();
-}
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int T;
-    cin >> T;
-    while(T--) {
-        string M, W;
-        cin >> M >> W;
-
-        if(isSubsequence(M, W) || isSubsequence(W, M)) {
-            cout << "YES\n";
-        } else {
-            cout << "NO\n";
-        }
-    }
-}

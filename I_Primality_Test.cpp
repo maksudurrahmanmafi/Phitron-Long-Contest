@@ -16,12 +16,13 @@ void solve()
         {
             if (n % i == 0)
                 flag = false;
-
         }
     }
 
-    if(flag)cout<<"yes\n";
-    else cout<<"no\n";
+    if (flag)
+        cout << "yes\n";
+    else
+        cout << "no\n";
 }
 
 int main()

@@ -25,7 +25,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        long long x;
+        long long int  x;
         cin >> x;
         // simple solution
         cout << 0 << " " << x << "\n";
