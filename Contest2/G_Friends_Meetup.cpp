@@ -44,7 +44,7 @@ int main()
             cout << "NO\n";
             continue;
         }
-        ll val = (ll)(sqrt(2 * d));
+        ll val = sqrt(2 * d);
         if (val * (val + 1) / 2 == d)
             cout << "YES\n";
         else
