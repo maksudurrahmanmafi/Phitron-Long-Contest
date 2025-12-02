@@ -58,28 +58,3 @@
 //     }
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int T;
-    cin >> T;
-    while (T--) {
-        int N;
-        string S;
-        cin >> N >> S;
-
-        if (is_sorted(S.begin(), S.end())) {
-            cout << 0 << "\n";
-        }
-        else if (S.find('1') < S.rfind('0')) {
-            cout << 2 << "\n"; // multiple blocks
-        }
-        else {
-            cout << 1 << "\n"; // single block of 1s before 0s
-        }
-    }
-}
