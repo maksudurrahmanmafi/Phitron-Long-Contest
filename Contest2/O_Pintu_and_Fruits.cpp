@@ -1,29 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long int
 
-int main() {
+int main()
+{
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int T;
-    cin >> T;
-    while (T--) {
-        int N, M;
-        cin >> N >> M;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n, m;
+        cin >> n >> m;
 
-        vector<int> F(N), P(N);
-        for (int i = 0; i < N; i++) cin >> F[i];
-        for (int i = 0; i < N; i++) cin >> P[i];
+        vector<int> F(n), P(n);
+        for (int i = 0; i < n; i++)
+            cin >> F[i];
+        for (int i = 0; i < n; i++)
+            cin >> P[i];
 
-        vector<int> cost(M+1, 0);
+        vector<ll> cost(m + 1, 0),cnt(m+1,0);
 
-        for (int i = 0; i < N; i++) {
-            cost[F[i]] += P[i];
+        for (int i = 0; i < n; i++)
+        {
+            int ft = F[i];
+            cost[ft] += P[i];
+            cnt[ft]++;
         }
 
-        int ans = INT_MAX;
-        for (int t = 1; t <= M; t++) {
-            if (cost[t] > 0) ans = min(ans, cost[t]);
+        ll ans = LLONG_MAX;
+        for (int j = 1; j <= m; j++)
+        {
+            if (cost[j] > 0)
+            {
+                ans = min(ans, cost[j]);
+            }
         }
 
         cout << ans << "\n";
